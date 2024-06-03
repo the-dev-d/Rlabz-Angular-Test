@@ -33,15 +33,15 @@ Think of strategies to achieve this first then search the web for solutions whic
 ### "/tasks" : Focus TS Logic and templating directives
 1. Should list all tasks persistently stored by home route with task name and Due date.
 2. Should have a tick button to mark it as completed.
-3. Completed tasks name should be in green and the tick button should disappear.
+3. Completed task's name should be in green and the tick button should disappear.
 4. Tasks which are not completed and due date if before than today, task name should have a strike throught ( ~~Update firewall config~~ ) and no tick button.
 5. Tasks should be arranged in non decreasing order of Due date.
 
 ### "/os" : Focus Angular Http Service
 1. Make a get request to https://api.dhaivathlal.in/os/ and you will get a JSON data. ( Can see if you open the link in browser )
-2. Fetch the data and display the name "name" of every OS data recieved as a selectable button.
+2. Fetch the data and display the value of field "name" of every OS data recieved as a selectable button.
 3. For every os data there will be "name" and "id" fields so if you send a get request to https://api.dhaivathlal.in/os/id ( eg : https://api.dhaivathlal.in/os/1 can check by loading in browser ) you will get a detailed description about the os.
-4. On selecting an OS, the "recommendation" data of its detailed description should be displayed somewhere in the page.
+4. On selecting an OS, the "recommendation" field data of its detailed description should be displayed somewhere in the page.
 5. If I click OS which is already selected, no fetch request should go.
 
 
