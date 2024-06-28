@@ -1,0 +1,29 @@
+
+<h1 class="form-title">Task Enliste</h1>
+
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Task Name</mat-label>
+    <input matInput formControlName="taskName" placeholder="Enter task name">
+    <mat-error *ngIf="taskForm.controls['taskName'].hasError('required')">
+      Task name is required
+    </mat-error>
+    <mat-error *ngIf="taskForm.controls['taskName'].hasError('pattern')">
+      Task name must contain only letters and digits
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Due Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="dueDate" placeholder="Choose a due date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="taskForm.controls['dueDate'].hasError('required')">
+      Due date is required
+    </mat-error>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!taskForm.valid">Save</button>
+  <button mat-raised-button color="accent" type="button" (click)="clearForm()">Clear</button>
+</form>
+

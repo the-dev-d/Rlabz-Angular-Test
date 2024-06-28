@@ -1,0 +1,25 @@
+<h2 class="task-list-title">Tasks</h2>
+<table class="centre">
+  <thead>
+    <tr>
+      <th>Task Name</th>
+      <th>Due Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks; let i = index" [ngClass]="{'completed': task.completed}">
+      <td>
+        <mat-checkbox [checked]="task.completed"  [disabled]="task.isDisabled" (change)="markAsCompleted(i, $event.checked)">
+          {{ task.taskName }}
+        </mat-checkbox>
+      </td>
+      <td>{{ task.dueDate }}</td>
+      <td>
+        <button mat-icon-button color="warn" (click)="deleteTask(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
