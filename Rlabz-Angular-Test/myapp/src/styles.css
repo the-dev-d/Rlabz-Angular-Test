@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style file*/
+@import url(https://unpkg.com/tailwindcss@2.0.1/dist/tailwind.min.css);
+@import url(https://fonts.google.com/css?family=Montserrat:500);
+
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --input-bg-color: #ffffff;
+    --input-text-color: #000000;
+    --input-border-color: #cccccc;
+    --input-placeholder-color: #666666;
+    --button-bg-color: #333333;
+    --button-hover-bg-color: #555555;
+    --button-text-color: #ffffff;
+    --link-text-color: #000000;
+    --link-hover-color: #555555;
+  }
+  
+  .dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --input-bg-color: #1e1e1e;
+    --input-text-color: #ffffff;
+    --input-border-color: #444444;
+    --input-placeholder-color: #bbbbbb;
+    --button-bg-color: #444444;
+    --button-hover-bg-color: #666666;
+    --button-text-color: #ffffff;
+    --link-text-color: #ffffff;
+    --link-hover-color: #dddddd;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  input {
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    border-color: var(--input-border-color);
+  }
+  
+  input::placeholder {
+    color: var(--input-placeholder-color);
+  }
+  
+  button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-bg-color);
+  }
+  
+  a {
+    color: var(--link-text-color);
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  

@@ -1,0 +1,37 @@
+<div [ngClass]="{'dark-mode': darkMode}">
+  <!-- <h2><b>My Tasks</b></h2> -->
+  <table class="w-full border-collapse border border-gray-300 dark:border-gray-700 text-black dark:text-white">
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Due Date</th>
+        <th>Completed?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let task of sortedTasks()">
+        <tr [ngClass]="{
+          'completed bg-green-100': task.done && !isOverdue(task),
+          'overdue': !task.done && isOverdue(task)
+        }">
+          <td [ngStyle]="{'text-decoration': isOverdue(task) ? 'line-through' : 'none'}">{{ task.taskname }}</td>
+          <td [ngStyle]="{'text-decoration': isOverdue(task) ? 'line-through' : 'none'}">{{ task.dueDate | uppercase }}</td>
+          
+          <td>
+            <input 
+              *ngIf="!task.done && !isOverdue(task)" 
+              type="checkbox" 
+              [(ngModel)]="task.done" 
+              (change)="updateTasks(task)" 
+            />
+            <span *ngIf="task.done && !isOverdue(task)" class="text-green-600">✔️</span>
+          </td>
+        </tr>
+        <!-- Optional: Add a separator line between rows -->
+        <tr *ngIf="task !== sortedTasks()[sortedTasks().length - 1]">
+          <td colspan="3" class="border-b-2 border-gray-200"></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

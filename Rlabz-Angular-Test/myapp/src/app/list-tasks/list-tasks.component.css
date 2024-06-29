@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tbody tr:hover {
+    background-color: #e9e9e9;
+}
+td:last-child {
+    text-transform: capitalize;
+}
+
+
+.green-check {
+    color: green;
+    font-size: 1.5em;
+  }  
+  
+  
+  /* For global styles or ensure these classes are applied globally */
+
+/* Dark mode specific styles */
+.dark-mode {
+    background-color: #1a202c; /* Dark background color */
+    color: black; /* Light text color */
+  }
+  
+  .dark-mode th,
+  .dark-mode td {
+    border-color: #2d3748; /* Dark border color */
+  }
+  
+  .dark-mode .text-green-500 {
+    color: #48bb78; /* Green color for completed tasks */
+  }
+  
+  .dark-mode .bg-green-100 {
+    background-color: #2f855a; /* Light green background for completed tasks */
+  }
+  
+  
+  
+  

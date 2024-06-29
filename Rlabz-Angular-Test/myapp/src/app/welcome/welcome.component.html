@@ -1,0 +1,25 @@
+<div class="py-24 sm:py-32" [ngClass]="{'dark-mode': darkMode}">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center">
+      <h2 class="text-base font-semibold leading-7 text-gray-400"></h2><br><br><br>
+      <p class="mt-2 text-7xl font-bold tracking-tight sm:text-4xl">Welcome {{ name }} To Rlabz-Angular-Test</p>
+      <p class="mt-6 text-lg leading-8 text-gray-400">Unveiling Our Dedication: Thriving Through Rlabz Activities.</p>
+      <div class="mt-8">
+        <form class="flex flex-col space-y-4" (submit)="addTask()">
+          <div class="flex flex-col sm:flex-row sm:space-x-4">
+            <label for="taskName" class="sr-only">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" placeholder="Enter Task Name" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 sm:w-1/2" [(ngModel)]="newTask.taskname" required>
+            
+            <label for="dueDate" class="sr-only">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 sm:w-1/2" [(ngModel)]="newTask.dueDate" required>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:space-x-4 items-center justify-center">
+            <button type="submit" class="px-6 py-3 mt-4 bg-green-500 hover:bg-green-600 text-white rounded-md focus:outline-none">Save</button>
+            <button type="button" class="px-6 py-3 mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded-md focus:outline-none" (click)="clearForm()">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
