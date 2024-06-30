@@ -1,0 +1,2 @@
+Do not try to overwrite angular material (mat-*) classes using css unless you absolutely need it.
+If you use form submission event (ngSubmit) then reset will make all fields red. Instead use onclick on save button.

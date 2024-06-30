@@ -14,7 +14,7 @@
           {{ task.taskName }}
         </mat-checkbox>
       </td>
-      <td>{{ task.dueDate }}</td>
+      <td>{{ task.dueDate | date }}</td>
       <td>
         <button mat-icon-button color="warn" (click)="deleteTask(i)">
           <mat-icon>delete</mat-icon>
